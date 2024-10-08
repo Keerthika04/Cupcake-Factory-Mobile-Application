@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/adminCupcakeBg"
+        android:layout_width="476dp"
+        android:layout_height="911dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/admin_bg1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/scrollViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adminCupcakeTitleTxt"
+                android:layout_width="316dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="cursive"
+                android:text="Cupcakes"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/cupcakeSearchTxt"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_radius_box"
+                android:focusable="false"
+                app:closeIcon="@drawable/close"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search"
+                app:searchHintIcon="@null"
+                app:searchIcon="@drawable/search" />
+
+            <LinearLayout
+                android:id="@+id/adminCupcakeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="35dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cupcakeRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="615dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="#CBFFFFFF"
+        android:clickable="true"
+        android:indeterminateTint="@color/darkBrown"
+        android:padding="120dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/adminAddNewCupcakeBtn"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="58dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="38dp"
+        app:srcCompat="@drawable/add"
+        app:tint="@color/darkBrown" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

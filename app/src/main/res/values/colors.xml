@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkBrown">#2E1F18</color>
+    <color name="wallpaperBrown">#1A1414</color>
+    <color name="brown">#755859</color>
+    <color name="lightBrown">#8A5E50</color>
+    <color name="fadeBrown">#E3D6D5</color>
+    <color name="bottom_icon">#B5755859</color>
+    <color name="beige">#e7d5c7</color>
+</resources>

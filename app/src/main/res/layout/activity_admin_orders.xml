@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.thecupcakefactory.AdminCategoryActivity">
+
+    <ImageView
+        android:id="@+id/adminOrdersBg"
+        android:layout_width="462dp"
+        android:layout_height="846dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/admin_bg1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/adminOrdersScrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adminOrdersTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="cursive"
+                android:text="Orders"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                tools:layout_marginEnd="16dp" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/cupcakeSearchTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_radius_box"
+                android:focusable="false"
+                app:closeIcon="@drawable/close"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search"
+                app:searchHintIcon="@null"
+                app:searchIcon="@drawable/search" />
+
+            <LinearLayout
+                android:id="@+id/adminOrderSorting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/adminProcessingOrderPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#001B1613"
+                    android:padding="0dp"
+                    android:text="Accepted"
+                    android:textSize="14sp"
+                    app:cornerRadius="0dp" />
+
+                <Button
+                    android:id="@+id/adminToDeliverOrderPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#001B1613"
+                    android:padding="0dp"
+                    android:text="Delivery"
+                    android:textSize="14sp"
+                    app:cornerRadius="0dp" />
+
+                <Button
+                    android:id="@+id/adminCompletedOrdersPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:text="Completed"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="0dp" />
+
+                <Button
+                    android:id="@+id/adminCancelledOrderPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#001B1613"
+                    android:padding="0dp"
+                    android:text="Cancelled"
+                    android:textSize="14sp"
+                    app:cornerRadius="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adminOrdersLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="28dp"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/adminOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:padding="2dp"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="#CBFFFFFF"
+        android:clickable="true"
+        android:indeterminateTint="@color/darkBrown"
+        android:padding="120dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

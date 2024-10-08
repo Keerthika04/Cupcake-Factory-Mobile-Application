@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CupcakeApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/wallpaperBrown</item>
+    </style>
+
+    <style name="Theme.CupcakeApp" parent="Base.Theme.CupcakeApp" />
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:queryBackground">@null</item>
+    </style>
+</resources>

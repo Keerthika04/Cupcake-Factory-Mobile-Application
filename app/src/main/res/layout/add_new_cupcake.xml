@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg"
+    android:foregroundTint="#742C1D1C"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:paddingBottom="20sp">
+
+        <TextView
+            android:id="@+id/addNewCupcakeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Add New Cupcake"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="24dp"
+            android:layout_height="25dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024"
+            app:srcCompat="@drawable/close"
+            app:tint="#2C1D1C" />
+
+        <LinearLayout
+            android:id="@+id/cupcakeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="30sp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addNewCupcakeTitle">
+
+            <ImageView
+                android:id="@+id/newCupcakeImg"
+                android:layout_width="260dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="15sp"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/upload_img" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/newCupcakeName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8sp"
+                android:textColorHint="#802C1D1C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newCupcakeNameTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8sp"
+                    android:ems="10"
+                    android:hint="Enter Cupcake's Name"
+                    android:inputType="text"
+                    android:singleLine="false"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/categorySelectionView"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8sp"
+                android:hint="Select Category"
+                android:textColorHint="#802C1D1C"
+                app:hintEnabled="true">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteCategoryTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/newCupcakePrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8sp"
+                android:textColorHint="#802C1D1C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newCupcakePriceTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Enter Cupcake's Price"
+                    android:inputType="number"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/newCupcakeIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="#802C1D1C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newCupcakeIngredientsTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Enter Cupcake's Ingredients"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveCupcakeBtn"
+            android:layout_width="129dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="24dp"
+            android:text="Save"
+            app:backgroundTint="@color/darkBrown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cupcakeDetails"
+            app:layout_constraintVertical_bias="0.219" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:background="#CBFFFFFF"
+            android:clickable="true"
+            android:indeterminateTint="@color/brown"
+            android:padding="120dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige">
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="190dp"
+        android:layout_height="174dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:srcCompat="@drawable/circle"
+        numberpicker:layout_constraintBottom_toBottomOf="@+id/bottomNavigation" />
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="458dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView"
+        app:srcCompat="@drawable/circle" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/cupcakeDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="18dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cupcakeDetailsLayoutConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/top_bg2"
+                    android:layout_width="440dp"
+                    android:layout_height="80dp"
+                    numberpicker:layout_constraintEnd_toEndOf="parent"
+                    numberpicker:layout_constraintStart_toStartOf="parent"
+                    numberpicker:layout_constraintTop_toTopOf="parent"
+                    numberpicker:srcCompat="@drawable/top_bg" />
+
+                <TextView
+                    android:id="@+id/categoryNameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cupcakeBasedOnCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/categorySelectionProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#8BFFFFFF"
+        android:padding="55dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:background="@drawable/bottom_nav_bg"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        numberpicker:layout_constraintBottom_toBottomOf="parent"
+        numberpicker:layout_constraintEnd_toEndOf="parent"
+        numberpicker:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/toHomeBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6sp"
+            android:onClick="toHome"
+            app:srcCompat="@drawable/home"
+            app:tint="@color/bottom_icon" />
+
+        <ImageView
+            android:id="@+id/toOrdersBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toOrders"
+            android:padding="6sp"
+            app:srcCompat="@drawable/cupcake_icon"
+            app:tint="@color/bottom_icon" />
+
+        <ImageView
+            android:id="@+id/toWishlistBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6sp"
+            app:srcCompat="@drawable/wish"
+            app:tint="@color/bottom_icon" />
+
+        <ImageView
+            android:id="@+id/toCartBtn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="toCart"
+            android:padding="6sp"
+            app:srcCompat="@drawable/cart"
+            app:tint="@color/bottom_icon" />
+
+        <ImageView
+            android:id="@+id/toProfileBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6sp"
+            app:srcCompat="@drawable/profile"
+            app:tint="@color/bottom_icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

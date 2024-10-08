@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/adminCupcakeBg"
+        android:layout_width="399dp"
+        android:layout_height="282dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/admin_home_bg" />
+
+    <ImageView
+        android:id="@+id/adminHomeBackBtn"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:onClick="onLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="160dp"
+        android:layout_height="156dp"
+        app:layout_constraintBottom_toBottomOf="@+id/adminCategoryPageBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/adminCupcakePageBtn"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="173dp"
+        android:layout_height="153dp"
+        app:layout_constraintBottom_toBottomOf="@+id/adminCupcakePageBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/adminOrderPageBtn"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/adminHomeWelcomeTxt"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="cursive"
+        android:lineSpacingExtra="6sp"
+        android:text="Welcome\nTo"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/theCupcakeFactoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="cursive"
+        android:text="The Cupcake Factory"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminHomeWelcomeTxt" />
+
+    <ImageView
+        android:id="@+id/adminCupcakePageBtn"
+        android:layout_width="235dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:onClick="toCupcake"
+        app:layout_constraintBottom_toTopOf="@+id/adminCategoryPageBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminOrderPageBtn"
+        app:srcCompat="@drawable/cupcake" />
+
+    <ImageView
+        android:id="@+id/adminOrderPageBtn"
+        android:layout_width="235dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:onClick="toOrders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theCupcakeFactoryTitle"
+        app:srcCompat="@drawable/orders" />
+
+    <ImageView
+        android:id="@+id/adminCategoryPageBtn"
+        android:layout_width="235dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="52dp"
+        android:clickable="true"
+        android:onClick="toCategory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/categories" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
